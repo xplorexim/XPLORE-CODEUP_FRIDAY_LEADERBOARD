@@ -14,7 +14,14 @@
       <div>
         <h1>XPLORE CodeUpFriday</h1>
         <div class="subtitle">Leaderboards · Senior / Junior · Most Optimal · Fastest</div>
-        <div class="controls">
+      </div>
+      <a href="https://xplore-coding-society.vercel.app/" class="back-btn">Back to Home</a>
+    </header>
+
+    <main class="grid">
+      <section class="panel">
+        <!-- Filters appear here on small screens -->
+        <div class="filters-wrapper">
           <div class="tabs" role="tablist">
             <div class="tab active" data-cat="all">All</div>
             <div class="tab" data-cat="senior">Senior</div>
@@ -23,11 +30,7 @@
             <div class="tab" data-cat="fastest">Fastest</div>
           </div>
         </div>
-      </div>
-    </header>
 
-    <main class="grid">
-      <section class="panel">
         <h3 style="margin:0;font-family:'Orbitron';color:var(--accent)">Leaderboard</h3>
         <div class="leaderboard-list" id="leaderboard">
           <!-- rows injected by JS -->
@@ -37,7 +40,7 @@
       <aside class="sidebar">
         <div class="card" style="margin-bottom:14px">
           <div style="display:flex;align-items:center;gap:12px">
-            <div style="width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-family:'Orbitron';font-weight:900;color:#041005">XCUF</div>
+            <div style="width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-family:'Orbitron';font-weight:900;color:#041005;">XCUF</div>
             <div>
               <div style="font-weight:800">CodeUpFriday</div>
               <div style="font-size:13px;color:var(--muted)">Next run: Sep 26, 2025 · 7:00 PM</div>
@@ -54,10 +57,8 @@
             <div class="cat" data-cat="fastest"><div class="cname">Fastest CodeUp</div><div class="ccount">1</div></div>
           </div>
         </div>
-
       </aside>
     </main>
-
   </div>
 
   <!-- GSAP CDN -->

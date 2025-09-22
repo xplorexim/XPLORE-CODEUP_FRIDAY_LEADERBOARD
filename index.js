@@ -1,17 +1,28 @@
 const sample = [
-  {name:'Sakshi Pandey', score:10, category:'senior'},
-  {name:'Anshumaan Patnaik', score:8, category:'senior'},
-  {name:'Aryan Sahu', score:10, category:'junior'},
-  {name:'Amisha Parida', score:8, category:'junior'},
-  {name:'Aryan Sahu', score:10, category:'optimal'},
-  {name:'Mrinalee', score:6, category:'senior'},
-  {name:'Sai Suman Hota', score:8, category:'junior'},
-  {name:'Amisha Parida', score:8, category:'fastest'},
-  {name:'Archit Samal', score:4, category:'senior'},
-  {name:'Abhijeet Karua', score:8, category:'junior'},
-  {name:'Akriti Anmol Raj', score:4, category:'junior'},
-  {name:'Sana Dutta', score:6, category:'junior'},
-  {name:'Satwik Roy', score:4, category:'junior'}
+  { name: "Mrinalee", score: 14, category: "senior" },
+  { name: "Archit Samal", score: 12, category: "senior" },
+  { name: "Priyanshu Pati", score: 10, category: "senior" },
+  { name: "Sakshi Pandey", score: 10, category: "senior" },
+  { name: "Anshumaan Patnaik", score: 8, category: "senior" },
+  { name: "Dua Rajat", score: 4, category: "senior" },
+
+  { name: "Aryan Sahu", score: 18, category: "junior" },
+  { name: "Sai Suman Hota", score: 16, category: "junior" },
+  { name: "Sana Dutta", score: 14, category: "junior" },
+  { name: "Satwik Roy", score: 14, category: "junior" },
+  { name: "Amisha Parida", score: 12, category: "junior" },
+  { name: "Abhijeet Karua", score: 8, category: "junior" },
+  { name: "Akriti Anmol Raj", score: 8, category: "junior" },
+  { name: "Archisman Ghatak", score: 6, category: "junior" },
+  { name: "Devansh Mishra", score: 6, category: "junior" },
+  { name: "Vidushi Agarwal", score: 6, category: "junior" },
+  { name: "Ankita Patra", score: 4, category: "junior" },
+
+  { name: "Priyanshu Pati", score: 10, category: "optimal" },
+  { name: "Satwik Roy", score: 14, category: "optimal" },
+
+  { name: "Priyanshu Pati", score: 10, category: "fastest" },
+  { name: "Akriti Anmol Raj", score: 8, category: "fastest" }
 ];
 
 const leaderboardEl = document.getElementById('leaderboard');
@@ -23,11 +34,21 @@ let data = sample.slice();
 
 function render(list){
   leaderboardEl.innerHTML = '';
-  list.forEach((it,i)=>{
+
+  // assign ranks with ties (dense ranking: 1,2,2,3,4,4)
+  let lastScore = null;
+  let lastRank = 0;
+
+  list.forEach((it, i) => {
+    if (it.score !== lastScore) {
+      lastRank++; // increase only when score changes
+      lastScore = it.score;
+    }
+
     const row = document.createElement('div'); 
     row.className='row';
     row.innerHTML = `
-      <div class="rank">#${i+1}</div>
+      <div class="rank">#${lastRank}</div>
       <div class="meta">
         <div class="name">${it.name}</div>
         <div class="details">${it.categories?.join(' / ') || it.category.toUpperCase()}</div>
@@ -68,8 +89,6 @@ document.querySelector('[data-action="sort-score"]').addEventListener('click',()
   applyFilter();
 });
 
-document.querySelector('[data-action="export"]').addEventListener('click',()=>exportCSV(data));
-
 document.getElementById('shuffleBtn').addEventListener('click',()=>{
   data = shuffle(data); 
   applyFilter();
@@ -92,7 +111,6 @@ function applyFilter(){
     list.forEach(p=>{
       if(map.has(p.name)){
         const existing = map.get(p.name);
-        // keep highest score
         if(p.score > existing.score){
           map.set(p.name, {...p, categories: mergeCategories(existing, p)});
         } else {
@@ -106,7 +124,6 @@ function applyFilter(){
     list = Array.from(map.values());
   }
 
-  // always sort by score descending
   list.sort((a,b)=>b.score-a.score);
   render(list);
 }
@@ -122,18 +139,4 @@ function shuffle(a){
     [a[i],a[j]]=[a[j],a[i]]
   }
   return a;
-}
-
-function exportCSV(arr){
-  const rows = [['Name','Score','Category'], ...arr.map(r=>[r.name,`${r.score} points`,r.categories?.join(' / ') || r.category])];
-  const csv = rows.map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');
-  const blob = new Blob([csv],{type:'text/csv;charset=utf-8;'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a'); 
-  a.href=url;
-  a.download='codeupfriday_leaderboard.csv';
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
 }

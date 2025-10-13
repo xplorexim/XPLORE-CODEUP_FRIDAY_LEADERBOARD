@@ -1,6 +1,6 @@
 const sample = [
   { name: "Mrinalee Mishra", score: 24, category: "senior" },
-  { name: "Archit Samal", score: 20, category: "senior" },
+  { name: "Archita Samal", score: 20, category: "senior" },
   { name: "Priyanshu Pati", score: 10, category: "senior" },
   { name: "Dua Rajat", score: 10, category: "senior" },
   { name: "Sakshi Pandey", score: 10, category: "senior" },
@@ -21,7 +21,7 @@ const sample = [
   { name: "Mrinalee Mishra", score: 24, category: "optimal" },
   { name: "Vidushi Agarwal", score: 12, category: "optimal" },
 
-  { name: "Archit Samal", score: 20, category: "fastest" },
+  { name: "Archita Samal", score: 20, category: "fastest" },
   { name: "Vidushi Agarwal", score: 12, category: "fastest" }
 ];
 

@@ -4,7 +4,7 @@ const sample = [
   { name: "Priyanshu Pati", score: 10, category: "senior" },
   { name: "Dua Rajat", score: 10, category: "senior" },
   { name: "Sakshi Pandey", score: 10, category: "senior" },
-  { name: "Anshumaan Patnaik", score: 8, category: "senior" },
+  { name: "Ansumaan Patnaik", score: 8, category: "senior" },
   
   { name: "Aryan Sahu", score: 26, category: "junior" },
   { name: "Sai Suman Hota", score: 16, category: "junior" },

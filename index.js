@@ -8,10 +8,10 @@ const sample = [
   
   { name: "Aryan Sahu", score: 32, category: "junior" },
   { name: "Sai Suman Hota", score: 22, category: "junior" },
+  { name: "Vidushi Agarwal", score: 20, category: "junior" },
   { name: "Sana Dutta", score: 14, category: "junior" },
   { name: "Satwik Roy", score: 14, category: "junior" },
   { name: "Amisha Parida", score: 12, category: "junior" },
-  { name: "Vidushi Agarwal", score: 20, category: "junior" },
   { name: "Akriti Anmol Raj", score: 12, category: "junior" },
   { name: "Mehul Bhojak", score: 8, category: "junior" },
   { name: "Abhijeet Karua", score: 8, category: "junior" },

@@ -1,5 +1,5 @@
 const sample = [
-  { name: "Mrinalee Mishra", score: 34, category: "senior" },
+  { name: "Mrinalee Mishra", score: 44, category: "senior" },
   { name: "Archita Samal", score: 20, category: "senior" },
   { name: "Priyanshu Pati", score: 10, category: "senior" },
   { name: "Dua Rajat", score: 10, category: "senior" },
@@ -7,8 +7,8 @@ const sample = [
   { name: "Ansumaan Patnaik", score: 8, category: "senior" },
   
   { name: "Aryan Sahu", score: 32, category: "junior" },
-  { name: "Sai Suman Hota", score: 22, category: "junior" },
-  { name: "Vidushi Agarwal", score: 20, category: "junior" },
+  { name: "Sai Suman Hota", score: 32, category: "junior" },
+  { name: "Vidushi Agarwal", score: 30, category: "junior" },
   { name: "Sana Dutta", score: 14, category: "junior" },
   { name: "Satwik Roy", score: 14, category: "junior" },
   { name: "Amisha Parida", score: 12, category: "junior" },
@@ -19,11 +19,11 @@ const sample = [
   { name: "Devansh Mishra", score: 6, category: "junior" },
   { name: "Ankita Patra", score: 4, category: "junior" },
 
-  { name: "Mrinalee Mishra", score: 34, category: "optimal" },
-  { name: "Vidushi Agarwal", score: 20, category: "optimal" },
+  { name: "Mrinalee Mishra", score: 44, category: "optimal" },
+  { name: "Vidushi Agarwal", score: 30, category: "optimal" },
 
-  { name: "Mrinalee Mishra", score: 30, category: "fastest" },
-  { name: "Sai Suman Hota", score: 22, category: "fastest" }
+  { name: "Mrinalee Mishra", score: 44, category: "fastest" },
+  { name: "Sai Suman Hota", score: 32, category: "fastest" }
 ];
 
 const leaderboardEl = document.getElementById('leaderboard');

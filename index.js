@@ -60,7 +60,11 @@ function render(list){
   });
 
   // animate rows in
-  gsap.from('.row',{y:18,opacity:0,stagger:0.06,duration:0.6,ease:'power3.out'});
+  // animate rows in with a premium feel
+  gsap.fromTo('.row', 
+    { y: 30, opacity: 0, scale: 0.95, rotationX: -10 },
+    { y: 0, opacity: 1, scale: 1, rotationX: 0, stagger: 0.08, duration: 0.8, ease: 'power3.out', clearProps: 'all' }
+  );
 }
 
 // initial render
@@ -141,3 +145,29 @@ function shuffle(a){
   }
   return a;
 }
+
+// Update category counts
+function updateCategoryCounts() {
+  const counts = {
+    senior: 0,
+    junior: 0,
+    optimal: 0,
+    fastest: 0
+  };
+
+  sample.forEach(p => {
+    if (counts[p.category] !== undefined) {
+      counts[p.category]++;
+    }
+  });
+
+  document.querySelectorAll('.cat').forEach(catEl => {
+    const catKey = catEl.dataset.cat;
+    const countEl = catEl.querySelector('.ccount');
+    if (countEl && counts[catKey] !== undefined) {
+      countEl.textContent = counts[catKey];
+    }
+  });
+}
+
+updateCategoryCounts();

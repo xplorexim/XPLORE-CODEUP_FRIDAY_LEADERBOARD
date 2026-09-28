@@ -1,29 +1,14 @@
 const sample = [
-  { name: "Mrinalee Mishra", score: 44, category: "senior" },
-  { name: "Archita Samal", score: 20, category: "senior" },
-  { name: "Priyanshu Pati", score: 10, category: "senior" },
-  { name: "Dua Rajat", score: 10, category: "senior" },
-  { name: "Sakshi Pandey", score: 10, category: "senior" },
-  { name: "Ansumaan Patnaik", score: 8, category: "senior" },
+  { name: "Papneet Swain", score: 100, category: "senior" },
+  { name: "Satwik Roy", score: 60, category: "senior" },
+  { name: "Vedansh Agarwal", score: 60, category: "senior" },
+  { name: "Archisman Ghatak", score: 38, category: "senior" },
+  { name: "Anjali Nupur Lakra", score: 20, category: "senior" },
+  { name: "Sai Suman Hota", score: 20, category: "senior" },
   
-  { name: "Aryan Sahu", score: 32, category: "junior" },
-  { name: "Sai Suman Hota", score: 32, category: "junior" },
-  { name: "Vidushi Agarwal", score: 30, category: "junior" },
-  { name: "Sana Dutta", score: 14, category: "junior" },
-  { name: "Satwik Roy", score: 14, category: "junior" },
-  { name: "Amisha Parida", score: 12, category: "junior" },
-  { name: "Akriti Anmol Raj", score: 12, category: "junior" },
-  { name: "Mehul Bhojak", score: 8, category: "junior" },
-  { name: "Abhijeet Karua", score: 8, category: "junior" },
-  { name: "Archisman Ghatak", score: 6, category: "junior" },
-  { name: "Devansh Mishra", score: 6, category: "junior" },
-  { name: "Ankita Patra", score: 4, category: "junior" },
-
-  { name: "Mrinalee Mishra", score: 44, category: "optimal" },
-  { name: "Vidushi Agarwal", score: 30, category: "optimal" },
-
-  { name: "Mrinalee Mishra", score: 44, category: "fastest" },
-  { name: "Sai Suman Hota", score: 32, category: "fastest" }
+  { name: "Ardu Niharika", score: 100, category: "junior" },
+  { name: "Samikshya Pattnaik", score: 20, category: "junior" },
+  { name: "Kanha Agarwal", score: 20, category: "junior" }
 ];
 
 const leaderboardEl = document.getElementById('leaderboard');

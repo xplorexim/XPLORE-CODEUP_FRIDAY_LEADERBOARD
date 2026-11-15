@@ -1,19 +1,24 @@
 const sample = [
   { name: "Papneet Swain", score: 100, category: "senior" },
   { name: "Satwik Roy", score: 60, category: "senior" },
-  { name: "Vedansh Agarwal", score: 90, category: "senior" },
+  { name: "Vedansh Agarwal", score: 140, category: "senior" },
   { name: "Archisman Ghatak", score: 38, category: "senior" },
   { name: "Anjali Nupur Lakra", score: 20, category: "senior" },
-  { name: "Sai Suman Hota", score: 20, category: "senior" },
+  { name: "Sai Suman Hota", score: 70, category: "senior" },
   { name: "Deepshika Rout", score: 60, category: "senior"},
   { name: "Dua Rajat", score: 30, category: "senior"},
+  { name: "Mrinalee Mishra", score: 50, category: "senior"},
   
   { name: "Ardu Niharika", score: 100, category: "junior" },
   { name: "Samikshya Pattnaik", score: 80, category: "junior" },
   { name: "Kanha Agarwal", score: 20, category: "junior" },
-  { name: "Soubhik Ghosh", score: 100, category: "junior" },
-  { name: "Kabir Kamran", score: 60, category: "junior" },
-  { name: "Soumya Ranjan Bhanja", score: 30, category: "junior" }
+  { name: "Soubhik Ghosh", score: 150, category: "junior" },
+  { name: "Kabir Kamran", score: 90, category: "junior" },
+  { name: "Soumya Ranjan Bhanja", score: 70, category: "junior" },
+  { name: "Afiya Naaz", score: 50, category: "junior" },
+  { name: "Soudeepta Naskar", score: 50, category: "junior" },
+  { name: "Nishant Kujur", score: 50, category: "junior" },
+  { name: "Swarupa Subudhi", score: 50, category: "junior" }
 ];
 
 const leaderboardEl = document.getElementById('leaderboard');
